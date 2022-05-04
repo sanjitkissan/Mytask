@@ -77,9 +77,9 @@ export default function Todo() {
   return (
     <div>
         <form id='formOne' onSubmit={submit}>
-        <input type="text" className="input-group mb-3" name="comment" id="comment" ref={commentRef}/>
-        <input type="date" className="input-group mb-3" name="date" id="date" ref={dateRef} />
-        <select name="status" className="input-group mb-3" id="" ref={statusRef}>
+       Enter your comment :  <input type="text" className="input-group mb-3" name="comment" id="comment" ref={commentRef}/>
+       Select the date :  <input type="date" className="input-group mb-3" name="date" id="date" ref={dateRef} />
+       Selecte the option : <select name="status" className="input-group mb-3" id="" ref={statusRef}>
             <option value="select">Select option</option>
             <option value="complited">Complited</option>
             <option value="Incomplited">Incomplited</option>
@@ -89,7 +89,7 @@ export default function Todo() {
         
         </form>
 
-        <input type="date" name="search" className="input-group mb-3" id='dateTwo' />
+        Enter the date to search the comment : <input type="date" name="search" className="input-group mb-3" id='dateTwo' />
         <button type='button' className='btn btn-primary' onClick={searchData} >Search</button>
 
         {

@@ -12,7 +12,7 @@ import InterviewTask from "./practice/InterviewTask";
 import FormikTask from "./practice/FormikTask";
 import SignUp from "./interviewTaskNew/SignUp";
 import Todo from "./newInterviewTaskbbsr/Todo";
-import NewTodo from "./newInterviewTaskbbsr/NewTodo";
+
 
 
 
@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <Todo/>
-      {/* <NewTodo/> */}
+      
     {/* <Calculator></Calculator> */}
     {/* <SomOfPrime></SomOfPrime> */}
     {/* <Resistration/> */}
