@@ -2,6 +2,7 @@ import React,{useState, useRef} from 'react'
 import "./style.css"
 export default function Todo() {
     const [data, setData] = useState([])
+    const [comment, setComment] = useState([])
     const [editeIndex, setEditeIndex] = useState(null);
 
     const commentRef = useRef();
@@ -32,7 +33,7 @@ export default function Todo() {
                 
             }
         })
-        setData(newData)
+        setComment(newData)
     }
 
     function editComment(i){
@@ -92,6 +93,14 @@ export default function Todo() {
         Enter the date to search the comment : <input type="date" name="search" className="input-group mb-3" id='dateTwo' />
         <button type='button' className='btn btn-primary' onClick={searchData} >Search</button>
 
+      <div>
+          {comment!= undefined ? comment.map((val, index)=>{
+              return <ul>
+                  <li id='commentli' className="list-group-item">{val.comment} <br />{val.date} <br />{val.status} <br /> <button className="btn btn-primary" onClick={()=>editComment(index)}>Edit</button>
+                    {"  "} <br /><button type='button' className="btn btn-primary" onClick={()=>deleteComment(index)}>Delete</button></li>
+              </ul>
+          }): <h2> there is no comment on this date please add a comment </h2> }
+      </div>
         {
             data.map((val,index)=>{
                 return <ul>
@@ -101,6 +110,7 @@ export default function Todo() {
                 </ul>
             })
         }
+
     </div>
   )
 }
